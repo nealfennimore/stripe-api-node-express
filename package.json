@@ -1,0 +1,32 @@
+{
+  "name": "stripe-api-express-server",
+  "version": "1.0.0",
+  "description": "Express server utilizing Stripe and JSON Web Tokens for verification",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=production nf start api",
+    "develop": "NODE_ENV=development NODE_TLS_REJECT_UNAUTHORIZED=0 nodemon --watch ./app --exec nf start api"
+  },
+  "author": "Neal Fennimore",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "forever": "^0.15.3",
+    "jsonwebtoken": "^7.3.0",
+    "lodash": "^4.17.4",
+    "module-alias": "^2.0.0",
+    "morgan": "^1.8.1",
+    "path": "^0.12.7",
+    "stripe": "^4.15.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-nfen": "0.0.9",
+    "nodemon": "^1.11.0"
+  },
+  "_moduleAliases": {
+    "routes": "app/routes",
+    "auth": "app/auth"
+  }
+}
