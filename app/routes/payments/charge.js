@@ -7,16 +7,19 @@ const stripe  = require('stripe')(STRIPE_SECRET_KEY);
 // POST /payments/charge
 router.post('/', (req, res) => {
     const {
-        stripeToken,
+        stripeToken:source,
         amount,
-        description
+        currency='usd',
+        description='',
+        metadata={}
     } = req.body;
 
     stripe.charges.create({
+        source,
         amount,
+        currency,
         description,
-        currency: 'usd',
-        source: stripeToken,
+        metadata
     }, (err, charge) => {
         if(err){
             return res.json({
