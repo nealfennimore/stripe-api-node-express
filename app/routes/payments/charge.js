@@ -29,7 +29,13 @@ router.post('/', (req, res) => {
         }
 
         res.json({
-            success: true
+            token: auth.sign({
+                amount,
+                description,
+                currency,
+                metadata
+            })
+
         });
     });
 
