@@ -13,7 +13,7 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "forever": "^0.15.3",
-    "jsonwebtoken": "^7.3.0",
+    "jsonwebtoken": "^8.0.0",
     "lodash": "^4.17.4",
     "module-alias": "^2.0.0",
     "morgan": "^1.8.1",
